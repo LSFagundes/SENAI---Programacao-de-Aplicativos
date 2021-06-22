@@ -3,8 +3,7 @@ lista = [5,7,2,9,4,1,3]
 
 print("Tamanho da lista")
 print(len(lista))
-
-print("Maior valor do lista")
+print("Maior valor da lista")
 x = max(lista)
 print(x) 
 print("menor valor da lista")

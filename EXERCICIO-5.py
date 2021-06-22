@@ -6,7 +6,7 @@ def numeracao():
 i=0 
 quantidade = int(input("Quantos itens você deseja inserir na lista? "))
 while i <= quantidade-1:
-   item = str(input("Digite os itens desejados: "))
+   item = str(input("Digite os itens: "))
    l.append(item)
    if quantidade == 1:
       break

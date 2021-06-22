@@ -7,4 +7,4 @@ print(sum)
 if sum > 1:
     print ("O número é positivo")
 else:
-    print ("O numero é negativo")
+    print ("O número é negativo")
