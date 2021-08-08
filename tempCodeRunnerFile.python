@@ -1,0 +1,28 @@
+from typing import Any
+lista = [5,7,2,9,4,1,3]
+maior = 0
+menor = 0 
+
+
+   
+def decrescente():
+    for numero in range(len(lista)-1,0,-1):
+        for i in range(numero):
+            if lista[i]<lista[i+1]:
+                temp = lista[i]
+                lista[i] = lista[i+1]
+                lista[i+1] = temp
+def crescente():
+    for numero in range(len(lista)-1,0,-1):
+        for i in range(numero):
+            if lista[i]>lista[i+1]:
+                temp = lista[i]
+                lista[i] = lista[i+1]
+                lista[i+1] = temp
+
+print("lista em ordem crescente")
+crescente
+print(lista)
+print("lista em ordem decrescente")
+decrescente
+print(lista)

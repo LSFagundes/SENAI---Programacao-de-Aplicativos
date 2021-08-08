@@ -1,10 +1,19 @@
-numero1 = input('Insira o primiero número: ')
-numero2 = input('Insira o segundo número: ')
-numero3 = input('Insira o terceiro número: ')
-numero4 = input('Insira o quarto número: ')
-sum = int(numero1) + int(numero2) + int(numero1) + int(numero4) / 4
-print(sum)
-if sum > 1:
+i=0
+lista=[] 
+soma=0
+quantidade = int(input("Quantos itens você deseja inserir na lista? "))
+while i <= quantidade-1:
+   item = int(input("Digite os itens: "))
+   lista.append(item)
+   if quantidade == 1:
+      break
+   i+=1 
+
+for i in lista:
+    soma+=i
+soma / quantidade
+print(soma)
+if soma > 1:
     print ("O número é positivo")
 else:
     print ("O número é negativo")

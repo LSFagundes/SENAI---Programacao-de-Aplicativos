@@ -11,37 +11,52 @@ for i in range(len(lista)):
             maior = lista[i]
         if lista[i] < menor:
            menor = lista[i]
-   
-def decrescente():
-    for numero in range(len(lista)-1,0,-1):
-        for i in range(numero):
-            if lista[i]<lista[i+1]:
-                temp = lista[i]
-                lista[i] = lista[i+1]
-                lista[i+1] = temp
-def crescente():
-    for numero in range(len(lista)-1,0,-1):
-        for i in range(numero):
-            if lista[i]>lista[i+1]:
-                temp = lista[i]
-                lista[i] = lista[i+1]
-                lista[i+1] = temp
+def tamanhoLista(lista): 
+    conta=0
+    for i in lista:
+        conta += 1
+    return conta
+def decrescente(lista):
+    if tamanhoLista(lista) <= 1:
+        sLista = lista 
+    else:
+        for numero in range(tamanhoLista(lista)-1,0,-1):
+            for i in range(numero):
+                if lista[i]<lista[i+1]:
+                    temp = lista[i]
+                    lista[i] = lista[i+1]
+                    lista[i+1] = temp
+        sLista = lista
+    return sLista
+def crescente(lista):
+    if tamanhoLista(lista) <= 1:
+        sLista = lista 
+    else:
+        for numero in range(tamanhoLista(lista)-1,0,-1):
+            for i in range(numero):
+                if lista[i]>lista[i+1]:
+                    temp = lista[i]
+                    lista[i] = lista[i+1]
+                    lista[i+1] = temp
+        sLista = lista
+    return sLista
 def adicao():
     soma=0
     for i in lista:
         soma+=i
-    print(soma)
+    print (soma)
+
 print("Tamanho da lista")
-print(len(lista))
+print (tamanhoLista(lista))
 print("Maior valor da lista")
 print(maior)
-print("menor valor da lista")
+print("Menor valor da lista")
 print(menor)
-print("soma de todos os elementos da lista")
-adicao
-print("lista em ordem crescente")
-crescente
+print("Soma de todos os elementos da lista")
+adicao()
+print("Lista em ordem crescente")
+crescente(lista)
 print(lista)
 print("lista em ordem decrescente")
-decrescente
+decrescente(lista)
 print(lista)
