@@ -1,18 +1,14 @@
 i=0
 lista=[] 
 soma=0
-quantidade = int(input("Quantos itens você deseja inserir na lista? "))
-while i <= quantidade-1:
-   item = int(input("Digite os itens: "))
-   lista.append(item)
-   if quantidade == 1:
-      break
-   i+=1 
-
+print ("Digite 4 números: ")
+while len(lista) < 4:
+    item = (int(input()))  
+    lista.append(item)
 for i in lista:
     soma+=i
-soma / quantidade
-print(soma)
+soma / 4
+print("A soma dos Números é:", soma)
 if soma > 1:
     print ("O número é positivo")
 else:
